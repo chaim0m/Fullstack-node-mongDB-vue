@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "vue": "^2.5.22",
+    "vue-compose": "^0.7.1",
     "vuetify": "^1.3.0"
   },
   "devDependencies": {
