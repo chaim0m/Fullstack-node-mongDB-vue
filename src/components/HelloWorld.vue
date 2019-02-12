@@ -67,7 +67,9 @@
         mb-5
       >
         <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
-
+          {{customFunction()}}
+         <h1 v-if="List && List.length">{{ List }}</h1> 
+         <h1 v-else>Loading...</h1>
         <v-layout justify-center>
           <a
             v-for="(eco, i) in ecosystem"
@@ -86,7 +88,10 @@
 
 <script>
   export default {
-    props: ['List','ecosystem','importantLinks','whatsNext','customFunction']
+    props: ['ecosystem','importantLinks','whatsNext','customFunction','fetchList','List'],
+    created(){
+      this.fetchList();
+    }
   }
 </script>
 

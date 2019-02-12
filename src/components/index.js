@@ -1,25 +1,16 @@
 import { compose, withData, withProps, withHandlers } from 'vue-compose';
-import Vue from 'vue';
+import axios from "axios";
 import HelloWorld from './HelloWorld.vue';
 
-const list = async someList(){
-    // try {
-     const data = await axios.get(`http://localhost:3000/book`)
-         if (data && data.data) {
-             return data.data }
-    //   }
-    //  catch(e){   //add in error handling
-    //     return e;
-    // }
-},
+const url = 'http://localhost:4000/api/users'
 
 export default compose(
     withData({
       List: {
-        initialValue: list
+        initialValue: []
       },
       ecosystem:  {
-          iniitalValue: [
+          initialValue: [
             {
               text: 'vuetify-loader',
               href: 'https://github.com/vuetifyjs/vuetify-loader'
@@ -59,7 +50,7 @@ export default compose(
           ],
       },
       whatsNext: {
-          iniitalValue: [
+          initialValue: [
             {
               text: 'Explore components',
               href: 'https://vuetifyjs.com/components/api-explorer'
@@ -79,20 +70,12 @@ export default compose(
     withProps((props) => ({
       customFunction(){
         //do something like call api
-        props.someInjectedProp="New Bla"
-      }
+        const test = props.ecosystem[0]
+        return test.href;
+      },
+      async fetchList() {
+        const result = await axios.get('http://localhost:4000/api/users');
+        this.$emit('List', result.data);  
+    }
     }))
   )(HelloWorld);
-
-
-  
-   
-//   methods: {
-//     details (book) {
-//       this.$router.push({
-//         name: 'ShowBook',
-//         params: { id: book._id }
-//       })
-//     }
-//   }
-// }
