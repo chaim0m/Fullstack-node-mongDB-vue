@@ -7,7 +7,8 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run serve for vue  port: 8080
+npm start for node server port: 4000 (or ENV)
 ```
 
 ### Compiles and minifies for production
