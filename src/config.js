@@ -1,0 +1,1 @@
+export const db = 'chaim0m:tz314459090@cluster0-hwhan.mongodb.net/Users?retryWrites=true'
