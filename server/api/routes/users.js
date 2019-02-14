@@ -1,6 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb');
-const db = require('./../../config')
+const db = require('./../../dbconfig')
 const router = express.Router();
 
 router.get('/', async (req, res) => {
