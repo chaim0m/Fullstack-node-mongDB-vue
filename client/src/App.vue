@@ -1,15 +1,15 @@
 <template>
-  <v-app>
+  <v-app dark>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Chaim Finson's Website</span>
-        <span class="font-weight-light">Built with Vue-NodeJS</span>
+        <span>Chaim Finson's Website  </span>
+        <span class="font-weight-light">Built with Vue-NodeJS-MongoDB</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        Dowload my CV
+       
       >
-        <span class="mr-2">This is a work in progress...</span>
+        <span class="mr-2">Download my CV</span>
       </v-btn>
     </v-toolbar>
 

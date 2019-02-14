@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container text-xs-center>
     <v-layout
       text-xs-center
       wrap
@@ -12,7 +12,7 @@
           height="200"
         ></v-img>
       </v-flex>
-
+ </v-layout>
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to My Page
@@ -27,11 +27,19 @@
         xs12
       >
         <h2 class="headline font-weight-bold mb-3">How is this made and deployed</h2>
-
-        <v-layout justify-center>
-          This site was created using vue-cli3 for the frontend, Vuetify was added from the getgo in addition to separate concerns the app 
-          Utilizes vue-compose which is package for writing High Order Compoents in a composable way
-        </v-layout>
+      <v-expansion-panel>
+        <v-expansion-panel-content>
+          <div slot="header">Info</div>
+          <v-card>
+          <v-card-text>This site was created using vue-cli3 for the frontend, Vuetify was added from the getgo to style and expediate the development. In addtion
+             addition in order to write clean code with separate concerns, where each section of the app only deals with ONE task vue-compose was used. Similar to architechture in React's recompose library vue-compose
+             provides composable High Order Functions, where the logic and state is maintained there. The .vue files serve as the view and accept all data as props (with the exception of some local data needed for UI effects)
+         <v-btn><span class="mr-2 move">Click to see some code</span>
+      </v-btn>
+         </v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
       </v-flex>
 
       <v-flex
@@ -44,7 +52,7 @@
           We have used NodeJS communicating with mongoDB
         </v-layout>
       </v-flex>
-
+    <v-layout justify-center>
       <v-flex
         xs12
         mb-5
@@ -57,7 +65,6 @@
          </div>
          <h1 v-else>Loading...</h1>
         Here will be a loading component
-        </v-layout>
       </v-flex>
     </v-layout>
   </v-container>
@@ -73,5 +80,7 @@
 </script>
 
 <style>
-
+.move{
+  justify-content: right
+}
 </style>
