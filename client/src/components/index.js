@@ -20,7 +20,7 @@ export default compose(
         return test;
       },
       async fetchList() {
-        const result = await axios.get('http://localhost:4000/api/users');
+        const result = await axios.get('url');
         this.$emit('List', result.data);  
     }
     }))
