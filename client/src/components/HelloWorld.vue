@@ -26,7 +26,7 @@
         mb-5
         xs12
       >
-        <h2 class="headline font-weight-bold mb-3">How is this made and deployed</h2>
+        <h2 class="headline font-weight-bold mb-3">How this site was made and deployed</h2>
       <v-expansion-panel>
         <v-expansion-panel-content>
           <div slot="header">Info</div>
@@ -49,7 +49,18 @@
         <h2 class="headline font-weight-bold mb-3">On the Back End</h2>
 
         <v-layout justify-center>
-          We have used NodeJS communicating with mongoDB
+          The App uses a NodeJS server to communicate with mongoDB
+          <v-expansion-panel>
+        <v-expansion-panel-content>
+          <div slot="header">Info</div>
+          <v-card>
+          <v-card-text>
+            MongoDB Atlas was used to store information. The NodeJS server connects to the DB and exposes information through different routes provided to the Front End. 
+         <v-btn><span class="mr-2 move">Click to see some code</span></v-btn>
+         </v-card-text>
+          </v-card>
+        </v-expansion-panel-content>
+      </v-expansion-panel>
         </v-layout>
       </v-flex>
     <v-layout justify-center>

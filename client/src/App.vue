@@ -1,5 +1,6 @@
 <template>
-  <v-app dark>
+<div class="back">
+  <v-app dark id="comp">
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Chaim Finson's Website  </span>
@@ -17,6 +18,7 @@
       <HelloWorld/>
     </v-content>
   </v-app>
+</div>
 </template>
 
 <script>
@@ -34,3 +36,12 @@ export default {
   }
 }
 </script>
+<style>
+  #comp {
+  background: none;
+}
+.back {
+  background-image: url("./assets/opt1.jpg");
+  background-size: cover;
+}
+</style>
