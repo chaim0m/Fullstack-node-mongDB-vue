@@ -1,6 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb');
-
+const db = require('./../../config')
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -9,11 +9,8 @@ router.get('/', async (req, res) => {
 });
 
 async function loadUsersCollection() {
-  const client = await mongodb.MongoClient.connect(
-    'your mongoDB connection string',
-    {
-      useNewUrlParser: true
-    }
+  const client = await mongodb.MongoClient.connect(db,
+    { useNewUrlParser: true }
   );
   return client.db('test').collection('Users');
 }
