@@ -15,19 +15,19 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <Main/>
     </v-content>
   </v-app>
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/index'
+import Main from './components/Main/index'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Main
   },
   data () {
     return {

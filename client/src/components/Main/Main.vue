@@ -1,4 +1,6 @@
 <template>
+<div>
+  <sidebar/>
   <v-container text-xs-center>
     <v-layout
       text-xs-center
@@ -6,13 +8,14 @@
     >
       <v-flex xs12>
         <v-img
-          :src="require('../assets/logo.svg')"
+          :src="require('../../assets/logo.svg')"
           class="my-3"
           contain
           height="200"
         ></v-img>
       </v-flex>
  </v-layout>
+ 
       <v-flex mb-4>
         <h1 class="display-2 font-weight-bold mb-3">
           Welcome to My Page
@@ -79,11 +82,17 @@
       </v-flex>
     </v-layout>
   </v-container>
+  </div>
 </template>
 
 <script>
+  import sidebar from '../sidebar/sidebar'
+
   export default {
     props: ['propsToPlayWith','customFunction','fetchList','List'],
+    components: {
+      sidebar
+    },
     created(){
       this.fetchList();
     }

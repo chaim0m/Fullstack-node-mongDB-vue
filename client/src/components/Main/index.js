@@ -1,6 +1,6 @@
 import { compose, withData, withProps, withHandlers } from 'vue-compose';
 import axios from "axios";
-import HelloWorld from './HelloWorld.vue';
+import Main from './Main.vue';
 
 const url = 'api/users'
 
@@ -24,4 +24,4 @@ export default compose(
         this.$emit('List', result.data);  
     }
     }))
-  )(HelloWorld);
+  )(Main);
