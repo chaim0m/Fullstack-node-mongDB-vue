@@ -1,11 +1,9 @@
 const express = require('express');
 const mongodb = require('mongodb');
-const db = process.env.MONGODB_URI;
+const db = require('../../dbconfig');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  debugger;
-  console.log(db);
   const users = await loadUsersCollection();
   res.send(await users.find({}).toArray());
 });
