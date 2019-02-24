@@ -1,6 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb');
-const db = require('../../dbconfig');
+const db = process.env.MONGODB_URI
 const router = express.Router();
 
 router.get('/', async (req, res) => {
@@ -9,6 +9,8 @@ router.get('/', async (req, res) => {
 });
 
 async function loadUsersCollection() {
+  const test = db;
+  debugger;
   const client = await mongodb.MongoClient.connect(db,
     { useNewUrlParser: true }
   );

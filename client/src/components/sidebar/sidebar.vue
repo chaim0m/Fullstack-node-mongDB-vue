@@ -2,10 +2,10 @@
     <v-navigation-drawer
     stateless
     value="true"
-    fixed="true"
-    floating="true"
-    clipped="true"
-    app="true"
+    fixed
+    floating
+    clipped
+    app
   >
     <v-list>
       <v-list-tile>

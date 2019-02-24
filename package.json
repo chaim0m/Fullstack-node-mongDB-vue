@@ -5,8 +5,10 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "build": "vue-cli-service build /client",
-    "postinstall": "npm run build"
+    "serve": "vue-cli-service serve client/src/main.js",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "postinstall": "npm run build client/src/main.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
