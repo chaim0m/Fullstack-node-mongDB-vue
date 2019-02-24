@@ -4,6 +4,8 @@ const db = process.env.MONGODB_URI;
 const router = express.Router();
 
 router.get('/', async (req, res) => {
+  debugger;
+  console.log(db);
   const users = await loadUsersCollection();
   res.send(await users.find({}).toArray());
 });
