@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build /client",
     "postinstall": "npm run build"
   },
   "dependencies": {
