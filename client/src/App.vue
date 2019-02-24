@@ -7,9 +7,7 @@
         <span class="font-weight-light">Built with Vue-NodeJS-MongoDB</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-       
-      >
+      <v-btn>
         <span class="mr-2">Download my CV</span>
       </v-btn>
     </v-toolbar>
